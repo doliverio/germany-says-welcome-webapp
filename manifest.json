@@ -1,0 +1,15 @@
+{
+  "name": "Germany Says Welcome",
+  "short_name": "Germany Says Welcome",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#003171",
+  "background_color": "#ffffff"
+}

@@ -131,6 +131,8 @@ gulp.task('build', ['deps', 'sass'], function() {
         .pipe(gulp.dest('dist/locales'));
     gulp.src('index.html')
         .pipe(gulp.dest('dist/'));
+    gulp.src('manifest.json')
+      .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default',function() {
