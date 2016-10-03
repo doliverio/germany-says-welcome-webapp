@@ -1,4 +1,4 @@
 define({
-    faqurl: "http://gsw.pajowu.de/api/faq/",
-    categoryurl: "http://gsw.pajowu.de/api/faqcategories/"
+    faqurl: "https://gsw.pajowu.de/api/faq/",
+    categoryurl: "https://gsw.pajowu.de/api/faqcategories/"
 });

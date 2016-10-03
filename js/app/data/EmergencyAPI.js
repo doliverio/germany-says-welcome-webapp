@@ -1,3 +1,3 @@
 define({
-    emergencyurl: "http://gsw.pajowu.de/api/emergencynumbers/"
+    emergencyurl: "https://gsw.pajowu.de/api/emergencynumbers/"
 });

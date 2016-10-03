@@ -161,3 +161,6 @@ function addCollapsibleToggle() {
     });
 
 }
+
+navigator.serviceWorker.register('sw.js');
+

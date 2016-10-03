@@ -49,7 +49,7 @@ gulp.task('deps_materialize', function () {
     gulp.src(['bower_components/Materialize/dist/js/materialize.js',
         'bower_components/hammerjs/hammer.js'])
         .pipe(gulp.dest('js/third-party'));
-    gulp.src(['bower_components/Materialize/dist/font/**/*'])
+    gulp.src(['bower_components/Materialize/dist/fonts/**/*'])
         .pipe(gulp.dest('css/third-party/materialize/font'));
     /*    gulp.src(['bower_components/Materialize/dist/css/materialize.css'])
      .pipe(gulp.dest('css/third-party/materialize/css'));*/
@@ -95,6 +95,12 @@ gulp.task('deps_leaflet', function () {
     ]).pipe(gulp.dest('scss/third-party/leaflet'));
 });
 
+gulp.task('deps_sw-toolbox', function () {
+    gulp.src([
+        'bower_components/sw-toolbox/sw-toolbox.js'
+    ]).pipe(gulp.dest('js/third-party'));
+});
+
 gulp.task('deps', [
     'deps_i18next',
     'deps_handlebars',
@@ -106,7 +112,8 @@ gulp.task('deps', [
     'deps_requirejs',
     'deps_underscore',
     'deps_vdom',
-    'deps_leaflet'
+    'deps_leaflet',
+    'deps_sw-toolbox',
 ], function () {
 });
 
@@ -131,6 +138,8 @@ gulp.task('build', ['deps', 'sass'], function() {
         .pipe(gulp.dest('dist/locales'));
     gulp.src('index.html')
         .pipe(gulp.dest('dist/'));
+    gulp.src('sw.js')
+      .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default',function() {
